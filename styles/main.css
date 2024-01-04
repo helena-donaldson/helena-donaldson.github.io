@@ -1,0 +1,145 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Rubik&display=swap');
+
+
+:root {
+	--vertifcal-space: 2rem;
+	--horizontal-space: 3rem;
+	--light-color: #72F2EB;
+	--body-color:#747F7F;
+	--heading-color:#1B7F79;
+	--contrast-color: #FF4858;
+}
+
+body {
+	padding-top: 3px;
+	font-size: 18px;
+	line-height: 1.5;
+	font-family: 'Rubik', sans-serif;
+	background-image: linear-gradient(310deg, rgba(131, 131, 131,0.02) 0%, rgba(131, 131, 131,0.02) 13%,transparent 13%, transparent 46%,rgba(112,112,112, 0.0196078431372549) 46%, rgba(112,112,112, 0.0196078431372549) 100%),linear-gradient(21deg, rgba(114,242,235, 0.35) 0%, rgba(114,242,235, 0.35) 47%,transparent 47%, transparent 82%,rgba(178, 178, 178,0.02) 82%, rgba(178, 178, 178,0.02) 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
+	color: var(--body-color);
+}
+
+h1, h2, h3 {
+	line-height: 1.2;
+	font-family: 'Courgette', cursive;
+	color: var(--heading-color);
+}
+
+a {
+	color: var(--body-color);
+	text-decoration-color: var(--contrast-color);
+}
+
+a:hover{
+	color: var(--heading-color);
+}
+
+body#about img {
+height: 13em;
+border: 5px solid var(--contrast-color);
+border-radius: 15%;
+float: left;
+margin-right: 30px;
+margin-bottom: 10px;
+}
+
+body#about p{
+	margin-left: 10px;
+}
+
+p {
+	max-width: 50em;
+}
+
+body {
+	display: grid;
+	grid-template-areas: "head nav"
+			     "main main"
+			     "foot foot";
+	grid-template-columns: 2fr 4fr;
+	grid-template-rows:  auto 1fr auto;
+}
+/**
+@media screen and (min-width: 24em) {
+	body {
+		grid-template-areas: "head head"
+				    "nav main"
+				    "foot foot";
+		grid-template-columns: 1fr 4fr;
+		grid-template-rows: auto 1fr auto;
+	}
+}
+**/
+
+body > * {
+	padding-left: var(--horizontal-space);
+}
+
+body > header {
+	grid-area: head;
+}
+
+body > nav {
+	grid-area: nav;
+}
+
+body > nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+body > nav ul li {
+	display: inline-block;
+	padding-right: 1em;
+}
+
+body > main {
+	grid-area: main;
+}
+
+body > footer {
+	grid-area: foot;
+}
+
+header, footer {
+	padding-top: var(--vertical-space);
+	padding-bottom: var(--vertical-space);
+}
+
+header h1, footer h1 {
+	margin: 0;
+}
+
+body#portfolio ul#portfolioItems {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1;
+	list-style-type: none;
+	padding: 0;
+}
+
+@media screen and(min-width: 25em){
+body#portofolio ul#portfolioItems li {
+	flex-basis: 48%;
+	padding-right: 2%;
+}
+}
+
+body#portfolio ul#portfolioItems li {
+	max-width: 50%;
+}
+
+body#portfolio img {
+	width: 50%;
+}
+
+main#about {
+	padding: 0px;
+}
+
+body#portfolio p{
+	margin-right: 30px;
+}
+
